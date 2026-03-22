@@ -18,7 +18,7 @@ baseurl: ""
 locale: "ru-RU"
 timezone: Asia/Almaty
 
-theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes"
 
 permalink: /:categories/:title/
 
@@ -30,6 +30,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-remote-theme # Добавь эту строку
 
 author:
   name: "Andrey"

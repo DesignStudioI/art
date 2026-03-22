@@ -1,0 +1,18 @@
+main:
+  - title: "Главная"
+    url: /
+
+  - title: "Обо мне"
+    url: /about/
+
+  - title: "Портфолио"
+    url: /portfolio/
+
+  - title: "Блог"
+    url: /blog/
+
+  - title: "Мерч"
+    url: /merch/
+
+  - title: "Контакты"
+    url: /contacts/

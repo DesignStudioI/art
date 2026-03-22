@@ -1,0 +1,41 @@
+title: "Design Studio I"
+name: "Студия дизайна Я"
+description: "Машинная вышивка и дизайнерские изделия"
+
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:name/
+  merch:
+    output: true
+    permalink: /merch/:name/
+
+last_modified_at: false
+
+url: ""
+baseurl: ""
+
+locale: "ru-RU"
+timezone: Asia/Almaty
+
+theme: minimal-mistakes-jekyll
+
+permalink: /:categories/:title/
+
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+author:
+  name: "Andrey"
+  bio: "Машинная вышивка и дизайнерские изделия"
+  location: "Almaty"
+
+minimal_mistakes_skin: "default"
+
+search: true

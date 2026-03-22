@@ -1,0 +1,43 @@
+level1:
+  - title: Машинная вышивка
+    folder: embroidery
+    image: /assets/images/portfolio/level1/embroidery.jpg
+
+  - title: Шитьё
+    folder: needlework
+    image: /assets/images/portfolio/level1/needlework.jpg
+
+level2:
+  embroidery:
+    - title: Сатин
+      folder: satin
+      image: /assets/images/portfolio/level2/satin.jpg
+    - title: Гладь
+      folder: fill
+      image: /assets/images/portfolio/level2/fill.jpg
+    - title: Строчка
+      folder: stroke
+      image: /assets/images/portfolio/level2/stroke.jpg
+    - title: Ришелье
+      folder: richelieu
+      image: /assets/images/portfolio/level2/richelieu.jpg
+
+  needlework:
+    - title: Одежда
+      folder: clothes
+      image: /assets/images/portfolio/level2/clothes.jpg
+    - title: Нательное бельё
+      folder: underwear
+      image: /assets/images/portfolio/level2/underwear.jpg
+    - title: Аксессуары
+      folder: accessories
+      image: /assets/images/portfolio/level2/accessories.jpg
+    - title: Постельное
+      folder: bed_linen
+      image: /assets/images/portfolio/level2/bed_linen.jpg
+    - title: Интерьер
+      folder: interior
+      image: /assets/images/portfolio/level2/interior.jpg
+    - title: Игрушки
+      folder: toys
+      image: /assets/images/portfolio/level2/toys.jpg

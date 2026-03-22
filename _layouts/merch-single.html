@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<div id="product-content" class="inner">
+  <p>Загрузка товара...</p>
+</div>
+
+<script>
+// 1. Получаем ID товара из URL (?id=tshirt-logo)
+const urlParams = new URLSearchParams(window.location.search);
+const productId = urlParams.get('id');
+
+// 2. Загружаем данные из твоего CSV (Jekyll превращает его в JSON автоматически)
+const products = {{ site.data.merch | jsonify }};
+
+// 3. Ищем нужный товар
+const item = products.find(p => p.slug === productId);
+
+if (item) {
+  document.getElementById('product-content').innerHTML = `
+    <a href="/merch/" class="btn">← Назад в лавку</a>
+    <div style="display: flex; gap: 30px; flex-wrap: wrap; margin-top: 20px;">
+      <div style="flex: 1; min-width: 300px;">
+        <img src="${item.image}" style="width: 100%; border-radius: 10px;">
+      </div>
+      <div style="flex: 1; min-width: 300px;">
+        <h1>${item.title}</h1>
+        <p style="font-size: 24px; color: #e74c3c; font-weight: bold;">${item.price} ₸</p>
+        <div style="margin: 20px 0;">${item.description}</div>
+        <a href="https://wa.me/77XXXXXXXXX?text=Хочу купить: ${item.title}" class="btn btn--success">Купить</a>
+      </div>
+    </div>
+  `;
+} else {
+  document.getElementById('product-content').innerHTML = "<h1>Товар не найден</h1><a href='/merch/'>Вернуться в лавку</a>";
+}
+</script>
+
+  <!-- Кнопка назад в магазин -->
+  <div style="text-align: center; margin-top: 30px;">
+    <a href="/merch/" style="display: inline-block; padding: 10px 20px; background:#333; color:#fff; border-radius:5px; text-decoration:none;">
+      ← Вернуться к каталогу
+    </a>
+  </div>
+
+</article>

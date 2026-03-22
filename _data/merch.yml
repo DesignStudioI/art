@@ -1,0 +1,14 @@
+- slug: "item-1"
+  title: "Подушка с вышивкой"
+  price: "2500 ₽"
+  image: "/assets/images/merch/pillows.jpg"
+
+- slug: "item-2"
+  title: "Салфетка Ришелье"
+  price: "1200 ₽"
+  image: "/assets/images/merch/napkin.jpg"
+
+- slug: "item-3"
+  title: "Комплект постельного белья"
+  price: "5800 ₽"
+  image: "/assets/images/merch/bedding_set.jpg"

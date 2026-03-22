@@ -1,0 +1,64 @@
+{% assign level = include.level | plus: 0 %}
+{% assign folder_name = include.folder %}
+
+<div class="grid__wrapper">
+
+{% if level == 1 %}
+  {% comment %} --- Уровень 1: Берем из level1 --- {% endcomment %}
+  {% for item in site.data.portfolio.level1 %}
+    <div class="grid__item">
+      <article class="archive__item">
+        <div class="archive__item-teaser">
+          <a href="{{ '/portfolio/' | append: item.folder | append: '/' | relative_url }}">
+            <img src="{{ item.image | relative_url }}" alt="{{ item.title }}" style="height:200px; object-fit:cover; width:100%; border-radius:12px;">
+          </a>
+        </div>
+        <h3 class="archive__item-title" style="text-align: center;">{{ item.title }}</h3>
+      </article>
+    </div>
+  {% endfor %}
+
+{% elsif level == 2 %}
+  {% comment %} --- Уровень 2: Берем из подраздела level2 --- {% endcomment %}
+  {% assign category_items = site.data.portfolio.level2[folder_name] %}
+  
+  {% for item in category_items %}
+    <div class="grid__item">
+      <article class="archive__item">
+        <div class="archive__item-teaser">
+          {% capture item_url %}/portfolio/{{ folder_name }}/{{ item.folder }}/{% endcapture %}
+          <a href="{{ item_url | relative_url }}">
+            <img src="{{ item.image | relative_url }}" alt="{{ item.title }}" style="height:200px; object-fit:cover; width:100%; border-radius:12px;">
+          </a>
+        </div>
+        <h3 class="archive__item-title" style="text-align: center;">{{ item.title }}</h3>
+      </article>
+    </div>
+  {% endfor %}
+
+{% else %}
+  {% comment %} --- Уровень 3: Галерея картинок --- {% endcomment %}
+  {% assign gallery_path = "/assets/images/portfolio/level3/" | append: folder_name | append: "/" %}
+  
+  <div class="js-gallery-group grid__wrapper">
+    {% for file in site.static_files %}
+      {% if file.path contains gallery_path %}
+        <div class="grid__item">
+          <a href="{{ file.path | relative_url }}" class="image-popup">
+            <img src="{{ file.path | relative_url }}" style="height:150px; object-fit:cover; width:100%; border-radius:4px;"> 
+
+          </a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}
+</div> 
+
+{% if level > 1 %}
+  <div class="portfolio-actions" style="margin-top: 40px; text-align: center; clear: both;">
+    <a href="javascript:history.back()" class="btn btn--primary" style="padding: 10px 30px; border-radius: 25px;">
+      ← Назад
+    </a>
+  </div>
+{% endif %}

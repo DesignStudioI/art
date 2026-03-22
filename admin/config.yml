@@ -5,12 +5,13 @@ backend:
 media_folder: "assets/images/merch"
 public_folder: "/assets/images/merch"
 
-- name: "merch"
+collections:
+  - name: "merch"
     label: "Товары"
-    folder: "_data" # CMS будет искать файлы тут
-    filter: {field: "slug", value: ""} # Фильтр, если нужно
+    folder: "_data"
     extension: "yml"
-    create: true # Вот эта кнопка Add
+    create: true
+    slug: "{{title}}"
     fields:
       - {label: "ID (slug)", name: "slug", widget: "string"}
       - {label: "Название", name: "title", widget: "string"}

@@ -6,14 +6,18 @@ media_folder: "assets/images/merch"
 public_folder: "/assets/images/merch"
 
 collections:
-  - name: "merch"
-    label: "Товары"
-    folder: "_data"
-    extension: "yml"
-    create: true
-    slug: "{{title}}"
-    fields:
-      - {label: "ID (slug)", name: "slug", widget: "string"}
-      - {label: "Название", name: "title", widget: "string"}
-      - {label: "Цена", name: "price", widget: "string"}
-      - {label: "Картинка", name: "image", widget: "image"}
+  - name: "merch_data"
+    label: "Магазин"
+    files:
+      - label: "Список товаров"
+        name: "items"
+        file: "_data/merch.yml" # Указываем конкретный файл
+        fields:
+          - label: "Товары"
+            name: "merch" # Это должно совпадать с заголовком в твоем merch.yml
+            widget: "list"
+            fields:
+              - {label: "ID (slug)", name: "slug", widget: "string"}
+              - {label: "Название", name: "title", widget: "string"}
+              - {label: "Цена", name: "price", widget: "string"}
+              - {label: "Картинка", name: "image", widget: "image"}

@@ -12,4 +12,10 @@ bundle clean --force
 
 cd C:\Users\Андреи\art 
 
-touch index.md
+touch index.md 
+
+git add .
+
+git commit -m "Fix admin blank page"
+
+git push origin main

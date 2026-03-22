@@ -5,19 +5,14 @@ backend:
 media_folder: "assets/images/merch"
 public_folder: "/assets/images/merch"
 
-collections:
-  - name: "merch_collection"
-    label: "Управление товарами"
-    files:
-      - label: "Список товаров"
-        name: "merch_list"
-        file: "_data/merch.yml" # Точный путь к файлу
-        fields:
-          - label: "Товары"
-            name: "merch"
-            widget: "list"
-            fields:
-              - {label: "ID (slug)", name: "slug", widget: "string"}
-              - {label: "Название", name: "title", widget: "string"}
-              - {label: "Цена", name: "price", widget: "string"}
-              - {label: "Картинка", name: "image", widget: "image"}
+- name: "merch"
+    label: "Товары"
+    folder: "_data" # CMS будет искать файлы тут
+    filter: {field: "slug", value: ""} # Фильтр, если нужно
+    extension: "yml"
+    create: true # Вот эта кнопка Add
+    fields:
+      - {label: "ID (slug)", name: "slug", widget: "string"}
+      - {label: "Название", name: "title", widget: "string"}
+      - {label: "Цена", name: "price", widget: "string"}
+      - {label: "Картинка", name: "image", widget: "image"}

@@ -1,20 +1,19 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 4.4.1"
-
-# Тема
 gem "minimal-mistakes-jekyll", "~> 4.27"
-# ДОБАВЬ ЭТУ СТРОКУ НИЖЕ:
-gem "jekyll-remote-theme" 
+gem "jekyll-remote-theme"
+# ДОБАВЬ ЭТУ СТРОКУ:
+gem "jekyll-include-cache"
 
-# Плагины
 group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jekyll-paginate"
   gem "jekyll-sitemap"
   gem "jekyll-seo-tag"
-  # И ЗДЕСЬ ТОЖЕ МОЖНО ДУБЛИРОВАТЬ ДЛЯ ВЕРНОСТИ:
   gem "jekyll-remote-theme"
+  # И СЮДА ТОЖЕ:
+  gem "jekyll-include-cache"
 end
 
 # Windows поддержка (оставляй как есть)

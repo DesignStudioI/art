@@ -30,6 +30,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-include-cache
   - jekyll-remote-theme # Добавь эту строку
 
 author:

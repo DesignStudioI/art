@@ -2,9 +2,7 @@ merch:
   - slug: "devochka-test"
     title: "Тестовая Девочка"
     price: "100"
-    image: "/assets/images/merch/test.jpg" 
-
-merch:
+    image: "/assets/images/merch/test.jpg"
   - slug: "test"
     title: "Первый товар"
     price: "500"

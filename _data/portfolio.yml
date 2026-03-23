@@ -2,11 +2,9 @@ level1:
   - title: Машинная вышивка
     folder: embroidery
     image: /assets/images/portfolio/level1/embroidery.jpg
-
   - title: Шитьё
     folder: needlework
     image: /assets/images/portfolio/level1/needlework.jpg
-
 level2:
   embroidery:
     - title: Сатин
@@ -21,7 +19,6 @@ level2:
     - title: Ришелье
       folder: richelieu
       image: /assets/images/portfolio/level2/richelieu.jpg
-
   needlework:
     - title: Одежда
       folder: clothes
@@ -41,3 +38,7 @@ level2:
     - title: Игрушки
       folder: toys
       image: /assets/images/portfolio/level2/toys.jpg
+slug: Ulitka
+title: Девочка и улитка
+price: "3000"
+image: /assets/images/merch/b826568a91e9e77af7853d914c18052f.jpg

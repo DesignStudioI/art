@@ -1,18 +1,17 @@
 main:
-  - title: "Главная"
+  - title: Главная
     url: /
-
-  - title: "Обо мне"
+  - title: Обо мне
     url: /about/
-
-  - title: "Портфолио"
+  - title: Портфолио
     url: /portfolio/
-
-  - title: "Блог"
+  - title: Блог
     url: /blog/
-
-  - title: "Мерч"
+  - title: Мерч
     url: /merch/
-
-  - title: "Контакты"
+  - title: Контакты
     url: /contacts/
+slug: Velik
+title: Девочка на велике
+price: "5000"
+image: /assets/images/merch/9ad4fe64435512b7be655450e5616f3a.jpg

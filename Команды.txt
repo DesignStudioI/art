@@ -18,4 +18,7 @@ git add .
 
 git commit -m "Fix admin blank page"
 
-git push origin main
+git push origin main 
+
+:wq
+git push origin main 
